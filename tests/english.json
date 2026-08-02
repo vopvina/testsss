@@ -5,504 +5,514 @@
   "shuffleAnswers": false,
   "questions": [
   {
-    "question": "My favourite is _____ Beethoven.",
-    "answers": ["a composers", "a composer", "composers", "composer"],
-    "correct": 2
-  },
-  {
-    "question": "I want to sleep. Please, turn off ______.",
-    "answers": ["light", "a light", "a lights", "the light"],
-    "correct": 4
-  },
-  {
-    "question": "This book is ______ which I have ever read in my life.",
-    "answers": ["more interesting", "the most interesting", "the more interesting", "most interesting"],
-    "correct": 2
-  },
-  {
-    "question": "I can do it _______.",
-    "answers": ["himself", "herself", "myself", "meself"],
-    "correct": 3
-  },
-  {
-    "question": "My sister had five apples and then she gave two for me. How many apples does my sister have now?",
-    "answers": ["three", "five", "two", "four"],
-    "correct": 1
-  },
-  {
-    "question": "Put adverb \"definitely\" into correct place:",
-    "answers": [
-      "you are going away definitely next month?",
-      "you are going away next month definitely?",
-      "are you going away definitely next month?",
-      "are you definitely going away next month?"
-    ],
-    "correct": 4
-  },
-  {
-    "question": "Johanna was born ____ 1997, wasn't she?",
-    "answers": ["in", "for", "on", "at"],
-    "correct": 1
-  },
-  {
-    "question": "He _ taking early retirement.",
-    "answers": ["to consider", "is considering", "consideres", "consider"],
-    "correct": 2
-  },
-  {
-    "question": "When I came home, somebody ____ flowers for me.",
-    "answers": ["was left", "had left", "have leaved", "left"],
-    "correct": 2
-  },
-  {
-    "question": "_______ any of Shakespeare's plays?",
-    "answers": ["Do you read", "Had you read", "Did you read", "Have you read"],
-    "correct": 4
-  },
-  {
-    "question": "I _ her yesterday.",
-    "answers": ["had seen", "have seen", "see", "saw"],
-    "correct": 4
-  },
-  {
-    "question": "Look, I ____ by my nail master. Do you like them?",
-    "answers": ["am done my nails", "have done my nails", "do my nails", "have my nails done"],
-    "correct": 4
-  },
-  {
-    "question": "_____ you swim when you were seven?",
-    "answers": ["Could", "Were able", "Can", "Did can"],
-    "correct": 1
-  },
-  {
-    "question": "I know we locked the door. I clearly remember _____ it.",
-    "answers": ["to lock", "locking", "to locking", "lock"],
-    "correct": 2
-  },
-  {
-    "question": "Yesterday I heard someone _____.",
-    "answers": ["screams", "scream", "screaming", "to screamed"],
-    "correct": 3
-  },
-  {
-    "question": "We don't leave food on the table. If we ____, the cat ____ it.",
-    "answers": [
-      "had done / would eat",
-      "do / will eat",
-      "did / would have eaten",
-      "did / will eat"
-    ],
-    "correct": 2
-  },
-  {
-    "question": "Look at Tom! He ____ with scissors.",
-    "answers": ["has been playing", "was playing", "plays", "is playing"],
-    "correct": 4
-  },
-  {
-    "question": "The correct sentence with subjunctive mood is:",
-    "answers": [
-      "It is essential that everyone be here on time.",
-      "It is essential that everyone been here on time.",
-      "It is essential that everyone has here on time.",
-      "It is essential that everyone here on time."
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Is this ___ book?",
-    "answers": ["ours", "yours", "your", "hers"],
-    "correct": 3
-  },
-  {
-    "question": "I first visited Germany ____ 2012.",
-    "answers": ["out", "in", "on", "at"],
-    "correct": 2
-  },
-  {
-    "question": "I work at university now, but before I ____ in laboratory as a specialist of science.",
-    "answers": ["has worked", "worked", "am working", "have been worked"],
-    "correct": 2
-  },
-  {
-    "question": "My friends _ all summer.",
-    "answers": ["have travelling", "were travel", "are travel", "have been travelling"],
-    "correct": 4
-  },
-  {
-    "question": "Yesterday I got a letter. ____ letter was from my friend.",
-    "answers": ["The", "A", "An", "—"],
-    "correct": 1
-  },
-  {
-    "question": "It's been a month since I quitted my last job. I had much _____ to do and lots of responsibilities.",
-    "answers": ["a work", "work", "some work", "the works"],
-    "correct": 2
-  },
-  {
-    "question": "He is the longest-_____ worker in that factory.",
-    "answers": ["serves", "to be served", "served", "serving"],
-    "correct": 4
-  },
-  {
-    "question": "Which mood is used in the following sentence: \"Say it!\"",
-    "answers": ["subjunctive", "indicative", "imperative", "interrogative"],
-    "correct": 3
-  },
-  {
-    "question": "Define the mood of the sentence: \"Mozart was born in Salzburg in 1756.\"",
-    "answers": ["Interrogative", "Subjunctive", "Imperative", "Indicative"],
-    "correct": 4
-  },
-  {
-    "question": "I'm worried about Sally. She ____ eats anything.",
-    "answers": ["completely", "hardly", "quietly", "easily"],
-    "correct": 2
-  },
-  {
-    "question": "One of the sentences is in the subjunctive mood:",
-    "answers": [
-      "If only I could rely on people around me.",
-      "Do you mind closing the door?",
-      "Stop causing problems, please.",
-      "How many children has Angela got?"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "They say electricity prices are going up ____ November.",
-    "answers": ["on", "to", "of", "in"],
-    "correct": 4
-  },
-  {
-    "question": "We bought five kilos of apples, then we bought two kilos more.",
-    "answers": ["eight", "three", "seven", "six"],
-    "correct": 3
-  },
-  {
-    "question": "They married ___ 2023 ___ 17th of June.",
-    "answers": ["on/on", "in/in", "on/in", "in/on"],
-    "correct": 4
-  },
-  {
-    "question": "How is your head? Is it better? No, it's ____",
-    "answers": ["worse", "badder", "bader", "worst"],
-    "correct": 1
-  },
-  {
-    "question": "At 7 o'clock tomorrow morning, Mary will be in her office. She ____",
-    "answers": ["is working", "would be working", "will be working", "works"],
-    "correct": 3
-  },
-  {
-    "question": "Look at the sky. It's gone really dark. It ____ rain.",
-    "answers": ["is going to", "will be", "will", "going"],
-    "correct": 1
-  },
-  {
-    "question": "Find the sentence with the correct position of adverb:",
-    "answers": [
-      "You always have been very kind to me.",
-      "I cleaned the house and cooked also dinner.",
-      "He can never remember his name.",
-      "The traffic usually isn't as bad as today."
-    ],
-    "correct": 3
-  },
-  {
-    "question": "____ has improved enormously.",
-    "answers": [
-      "Agila's piano playing",
-      "Agilas' piano playing",
-      "Agila piano playing",
-      "Agila playing piano"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Young children usually start school at the age of ____.",
-    "answers": ["twelve", "seven", "three", "ten"],
-    "correct": 2
-  },
-  {
-    "question": "It was an ____ experience. I was so ____.",
-    "answers": [
-      "amazing/exciting",
-      "amazed/excited",
-      "amazed/exciting",
-      "amazing/excited"
-    ],
-    "correct": 4
-  },
-  {
-    "question": "You are _____ woman I've ever met in my life!",
-    "answers": [
-      "an beautiful",
-      "more beautiful",
-      "the most beautiful",
-      "the beautifuller"
-    ],
-    "correct": 3
-  },
-  {
-    "question": "Please give me_ pen.",
-    "answers": ["those", "it", "these", "that"],
-    "correct": 4
-  },
-  {
-    "question": "The meeting will start on Monday. It is ___ of June.",
-    "answers": ["the one", "one", "the first", "first"],
-    "correct": 3
-  },
-  {
-    "question": "He ___ his work before you came.",
-    "answers": ["finishes", "has finished", "had finished", "finished"],
-    "correct": 3
-  },
-  {
-    "question": "My teacher suggested ____ an interpreter in the future.",
-    "answers": ["to becoming", "becoming", "to become", "become"],
-    "correct": 2
-  },
-  {
-    "question": "You are very good at languages. You ____ five languages, don't you?",
-    "answers": ["spoke", "are speaking", "speaks", "speak"],
-    "correct": 4
-  },
-  {
-    "question": "When you called me yesterday, I _____.",
-    "answers": ["have cooked", "was cooking", "am cooking", "cook"],
-    "correct": 2
-  },
-  {
-    "question": "Can I take this newspaper? ____ with it?",
-    "answers": [
-      "Did you finish",
-      "Have you finished",
-      "Had you finished",
-      "Do you finish"
-    ],
-    "correct": 2
-  },
-  {
-    "question": "Lisa called you, while you were out. Ok. I ____ her back.",
-    "answers": ["will call", "call", "have call", "am going to"],
-    "correct": 1
-  },
-  {
-    "question": "He ... up at six o'clock every morning last week.",
-    "answers": ["gets", "is getting", "gotten", "got"],
-    "correct": 4
-  },
-  {
-    "question": "Passengers are forbidden _ to the driver.",
-    "answers": ["talk", "to talk", "talkings", "talked"],
-    "correct": 2
-  },
-  {
-    "question": "I have given up _____ any books or magazines.",
-    "answers": ["to reading", "read", "reading", "to read"],
-    "correct": 3
-  },
-  {
-    "question": "I was woken up by _____.",
-    "answers": ["the rings bell", "the bell rings", "the bell to ringing", "the bell ringing"],
-    "correct": 4
-  },
-  {
-    "question": "If my mom ______ the lottery, she'd give some of the money to each member of her family.",
-    "answers": ["won", "have won", "will win", "wins"],
-    "correct": 1
-  },
-  {
-    "question": "If you are robbed, do the police!",
-    "answers": ["called", "call", "to call", "calling"],
-    "correct": 2
-  },
-  {
-    "question": "Amir was very helpful. He gave us some very useful _____.",
-    "answers": ["the advice", "an advice", "advice", "advises"],
-    "correct": 3
-  },
-  {
-    "question": "Dr. Smith has taken on the position of ... Head of Department.",
-    "answers": ["an", "few", "some", "zero article"],
-    "correct": 4
-  },
-  {
-    "question": "It's ____ when you ask people for money.",
-    "answers": ["embarrass", "embarrasses", "embarrassed", "embarrassing"],
-    "correct": 4
-  },
-  {
-    "question": "I've been working very hard all day and now I'm ____.",
-    "answers": ["exhausted", "exhausting", "exhaustened", "exhausty"],
-    "correct": 1
-  },
-  {
-    "question": "I don't think I can finish this project by _____.",
-    "answers": ["me", "mine", "myself", "my"],
-    "correct": 3
-  },
-  {
-    "question": "10th",
-    "answers": ["teenth", "tens", "tenth", "ten"],
-    "correct": 3
-  },
-  {
-    "question": "We ____ for an hour when it started to rain heavily.",
-    "answers": ["had been playing", "have played", "was playing", "played"],
-    "correct": 1
-  },
-  {
-    "question": "I can't stand _____ here anymore!",
-    "answers": ["working", "to working", "to work", "work"],
-    "correct": 1
-  },
-  {
-    "question": "The train _____ the station at 8 o'clock tomorrow morning.",
-    "answers": ["are leaving", "leaves", "leave", "leaving"],
-    "correct": 2
-  },
-  {
-    "question": "Look at her hand, she ____ in the garden all morning.",
-    "answers": ["work", "works", "has been working", "have worked"],
-    "correct": 3
-  },
-  {
-    "question": "Our company ____ significantly over the past year.",
-    "answers": ["grown", "has grown", "was grown", "grow"],
-    "correct": 2
-  },
-  {
-    "question": "Shall we meet at seven o'clock? — No, I'll still ____ then.",
-    "answers": ["was working", "be working", "have been working", "have worked"],
-    "correct": 2
-  },
-  {
-    "question": "Alima looked tired because she ____ all day.",
-    "answers": ["had been worked", "has been working", "had working", "had been working"],
-    "correct": 4
-  },
-  {
-    "question": "You ____ have let us know you'd changed your phone number.",
-    "answers": ["will", "can", "may", "could"],
-    "correct": 4
-  },
-  {
-    "question": "I'd like ____ on holiday with my boyfriend.",
-    "answers": ["going", "to go", "go", "to going"],
-    "correct": 2
-  },
-  {
-    "question": "____ the start of the film, I decided to watch it again.",
-    "answers": ["Have missing", "Missing", "Having missed", "Have missed"],
-    "correct": 3
-  },
-  {
-    "question": "I'll give you a lift if it _____.",
-    "answers": ["will rain", "is raining", "raining", "rained"],
-    "correct": 2
-  },
-  {
-    "question": "It is high time ____ up to your responsibilities as a parent.",
-    "answers": ["have faced", "be face", "faced", "to face"],
-    "correct": 3
-  },
-  {
-    "question": "I don't like this drink! Can I have another cup of ____?",
-    "answers": ["coffee", "cofees", "coffees", "coffes"],
-    "correct": 1
-  },
-  {
-    "question": "I want to be a musician but I can't play _____.",
-    "answers": ["piano", "a piano", "the piano", "an piano"],
-    "correct": 3
-  },
-  {
-    "question": "Tomorrow will be ____ than today.",
-    "answers": ["hotter", "hoter", "the hottest", "more hot"],
-    "correct": 1
-  },
-  {
-    "question": "____ of the people I know likes chocolate at all.",
-    "answers": ["No one", "None", "Nobody", "No"],
-    "correct": 2
-  },
-  {
-    "question": "Spell it correctly: 152",
-    "answers": [
-      "one hundred and fifty two",
-      "one hundred fifty and two",
-      "one hundreds fifty two",
-      "one hundred and fivety two"
-    ],
-    "correct": 1
-  },
-  {
-    "question": "Please, speak...",
-    "answers": ["quietly", "quietly", "quitly", "quiet"],
-    "correct": 2
-  },
-  {
-    "question": "I'm going to Moscow ___ the end of March.",
-    "answers": ["in", "on", "at", "for"],
-    "correct": 3
-  },
-  {
-    "question": "He _____ at the moment.",
-    "answers": ["will sleep", "is sleeping", "sleep", "sleeps"],
-    "correct": 2
-  },
-  {
-    "question": "This room ____ every day.",
-    "answers": ["is cleaned", "are cleaned", "will clean", "clean"],
-    "correct": 1
-  },
-  {
-    "question": "This time next month I'll be on holiday. I _____ on the beach.",
-    "answers": ["have been lying", "am lying", "will be lying", "would be lying"],
-    "correct": 3
-  },
-  {
-    "question": "_____ a horse?",
-    "answers": ["Do you ever ride", "Did you ever ridden", "Did you ever ride", "Have you ever ridden"],
-    "correct": 4
-  },
-  {
-    "question": "I _____ 50 pages yesterday.",
-    "answers": ["were read", "read", "was read", "reads"],
-    "correct": 2
-  },
-  {
-    "question": "I _ speak three foreign languages.",
-    "answers": ["am", "must to", "can", "was"],
-    "correct": 3
-  },
-  {
-    "question": "Hi, Mary! Have you decided where ____ for your holiday?",
-    "answers": ["going", "go", "to go", "to going"],
-    "correct": 3
-  },
-  {
-    "question": "I have ____ a beautiful butterfly this week.",
-    "answers": ["catched", "catch", "cought", "caught"],
-    "correct": 4
-  },
-  {
-    "question": "Could you _____ me coffee?",
-    "answers": ["will make", "makes", "make", "made"],
-    "correct": 3
-  },
-  {
-    "question": "I _____ a new novel about romantic boy now.",
-    "answers": ["write", "am writing", "have been written", "writes"],
-    "correct": 2
-  },
-  {
-    "question": "We ____ the goods by that time.",
-    "answers": ["will shipped", "has shipped", "had shipped", "were shipped"],
-    "correct": 3
-  }
-  ]
+  "question": "My favourite is _____ Beethoven.",
+  "answers": ["a composers", "a composer", "composers", "composer"],
+  "correct": 1
+},
+{
+  "question": "I want to sleep. Please, turn off ______.",
+  "answers": ["light", "a light", "a lights", "the light"],
+  "correct": 3
+},
+{
+  "question": "This book is ______ which I have ever read in my life.",
+  "answers": ["more interesting", "the most interesting", "the more interesting", "most interesting"],
+  "correct": 1
+},
+{
+  "question": "I can do it _______.",
+  "answers": ["himself", "herself", "myself", "meself"],
+  "correct": 2
+},
+{
+  "question": "My sister had five apples and then she gave two for me. How many apples does my sister have now?",
+  "answers": ["three", "five", "two", "four"],
+  "correct": 0
+},
+{
+  "question": "Put adverb \"definitely\" into correct place:",
+  "answers": [
+    "you are going away definitely next month?",
+    "you are going away next month definitely?",
+    "are you going away definitely next month?",
+    "are you definitely going away next month?"
+  ],
+  "correct": 3
+},
+{
+  "question": "Johanna was born ____ 1997, wasn't she?",
+  "answers": ["in", "for", "on", "at"],
+  "correct": 0
+},
+{
+  "question": "He _ taking early retirement.",
+  "answers": ["to consider", "is considering", "consideres", "consider"],
+  "correct": 1
+},
+{
+  "question": "When I came home, somebody ____ flowers for me.",
+  "answers": ["was left", "had left", "have leaved", "left"],
+  "correct": 1
+},
+{
+  "question": "_______ any of Shakespeare's plays?",
+  "answers": ["Do you read", "Had you read", "Did you read", "Have you read"],
+  "correct": 3
+},
+{
+  "question": "I _ her yesterday.",
+  "answers": ["had seen", "have seen", "see", "saw"],
+  "correct": 3
+},
+{
+  "question": "Look, I ____ by my nail master. Do you like them?",
+  "answers": ["am done my nails", "have done my nails", "do my nails", "have my nails done"],
+  "correct": 3
+},
+{
+  "question": "_____ you swim when you were seven?",
+  "answers": ["Could", "Were able", "Can", "Did can"],
+  "correct": 0
+},
+{
+  "question": "I know we locked the door. I clearly remember _____ it.",
+  "answers": ["to lock", "locking", "to locking", "lock"],
+  "correct": 1
+},
+{
+  "question": "Yesterday I heard someone _____.",
+  "answers": ["screams", "scream", "screaming", "to screamed"],
+  "correct": 2
+},
+{
+  "question": "We don't leave food on the table. If we ____, the cat ____ it.",
+  "answers": [
+    "had done / would eat",
+    "do / will eat",
+    "did / would have eaten",
+    "did / will eat"
+  ],
+  "correct": 1
+},
+{
+  "question": "Look at Tom! He ____ with scissors.",
+  "answers": ["has been playing", "was playing", "plays", "is playing"],
+  "correct": 3
+},
+{
+  "question": "The correct sentence with subjunctive mood is:",
+  "answers": [
+    "It is essential that everyone be here on time.",
+    "It is essential that everyone been here on time.",
+    "It is essential that everyone has here on time.",
+    "It is essential that everyone here on time."
+  ],
+  "correct": 0
+},
+{
+  "question": "Is this ___ book?",
+  "answers": ["ours", "yours", "your", "hers"],
+  "correct": 2
+},
+{
+  "question": "I first visited Germany ____ 2012.",
+  "answers": ["out", "in", "on", "at"],
+  "correct": 1
+},
+{
+  "question": "I work at university now, but before I ____ in laboratory as a specialist of science.",
+  "answers": ["has worked", "worked", "am working", "have been worked"],
+  "correct": 1
+},
+{
+  "question": "My friends _ all summer.",
+  "answers": ["have travelling", "were travel", "are travel", "have been travelling"],
+  "correct": 3
+},
+{
+  "question": "Yesterday I got a letter. ____ letter was from my friend.",
+  "answers": ["The", "A", "An", "—"],
+  "correct": 0
+},
+{
+  "question": "It's been a month since I quitted my last job. I had much _____ to do and lots of responsibilities.",
+  "answers": ["a work", "work", "some work", "the works"],
+  "correct": 1
+},
+{
+  "question": "He is the longest-_____ worker in that factory.",
+  "answers": ["serves", "to be served", "served", "serving"],
+  "correct": 3
+},
+{
+  "question": "Which mood is used in the following sentence: \"Say it!\"",
+  "answers": ["subjunctive", "indicative", "imperative", "interrogative"],
+  "correct": 2
+},
+{
+  "question": "Define the mood of the sentence: \"Mozart was born in Salzburg in 1756.\"",
+  "answers": ["Interrogative", "Subjunctive", "Imperative", "Indicative"],
+  "correct": 3
+},
+{
+  "question": "I'm worried about Sally. She ____ eats anything.",
+  "answers": ["completely", "hardly", "quietly", "easily"],
+  "correct": 1
+},
+{
+  "question": "One of the sentences is in the subjunctive mood:",
+  "answers": [
+    "If only I could rely on people around me.",
+    "Do you mind closing the door?",
+    "Stop causing problems, please.",
+    "How many children has Angela got?"
+  ],
+  "correct": 0
+},
+{
+  "question": "They say electricity prices are going up ____ November.",
+  "answers": ["on", "to", "of", "in"],
+  "correct": 3
+},
+{
+  "question": "We bought five kilos of apples, then we bought two kilos more.",
+  "answers": ["eight", "three", "seven", "six"],
+  "correct": 2
+},
+{
+  "question": "They married ___ 2023 ___ 17th of June.",
+  "answers": ["on/on", "in/in", "on/in", "in/on"],
+  "correct": 3
+},
+{
+  "question": "How is your head? Is it better? No, it's ____",
+  "answers": ["worse", "badder", "bader", "worst"],
+  "correct": 0
+},
+{
+  "question": "At 7 o'clock tomorrow morning, Mary will be in her office. She ____",
+  "answers": ["is working", "would be working", "will be working", "works"],
+  "correct": 2
+},
+{
+  "question": "Look at the sky. It's gone really dark. It ____ rain.",
+  "answers": ["is going to", "will be", "will", "going"],
+  "correct": 0
+},
+{
+  "question": "Find the sentence with the correct position of adverb:",
+  "answers": [
+    "You always have been very kind to me.",
+    "I cleaned the house and cooked also dinner.",
+    "He can never remember his name.",
+    "The traffic usually isn't as bad as today."
+  ],
+  "correct": 2
+},
+{
+  "question": "____ has improved enormously.",
+  "answers": [
+    "Agila's piano playing",
+    "Agilas' piano playing",
+    "Agila piano playing",
+    "Agila playing piano"
+  ],
+  "correct": 0
+},
+{
+  "question": "Young children usually start school at the age of ____.",
+  "answers": ["twelve", "seven", "three", "ten"],
+  "correct": 1
+},
+{
+  "question": "It was an ____ experience. I was so ____.",
+  "answers": [
+    "amazing/exciting",
+    "amazed/excited",
+    "amazed/exciting",
+    "amazing/excited"
+  ],
+  "correct": 3
+},
+{
+  "question": "You are _____ woman I've ever met in my life!",
+  "answers": [
+    "an beautiful",
+    "more beautiful",
+    "the most beautiful",
+    "the beautifuller"
+  ],
+  "correct": 2
+},
+{
+  "question": "Please give me_ pen.",
+  "answers": ["those", "it", "these", "that"],
+  "correct": 3
+},
+{
+  "question": "The meeting will start on Monday. It is ___ of June.",
+  "answers": ["the one", "one", "the first", "first"],
+  "correct": 2
+},
+{
+  "question": "He ___ his work before you came.",
+  "answers": ["finishes", "has finished", "had finished", "finished"],
+  "correct": 2
+},
+{
+  "question": "My teacher suggested ____ an interpreter in the future.",
+  "answers": ["to becoming", "becoming", "to become", "become"],
+  "correct": 1
+},
+{
+  "question": "You are very good at languages. You ____ five languages, don't you?",
+  "answers": ["spoke", "are speaking", "speaks", "speak"],
+  "correct": 3
+},
+{
+  "question": "When you called me yesterday, I _____.",
+  "answers": ["have cooked", "was cooking", "am cooking", "cook"],
+  "correct": 1
+},
+{
+  "question": "Can I take this newspaper? ____ with it?",
+  "answers": ["Did you finish", "Have you finished", "Had you finished", "Do you finish"],
+  "correct": 1
+},
+{
+  "question": "Lisa called you, while you were out. Ok. I ____ her back.",
+  "answers": ["will call", "call", "have call", "am going to"],
+  "correct": 0
+},
+{
+  "question": "He ... up at six o'clock every morning last week.",
+  "answers": ["gets", "is getting", "gotten", "got"],
+  "correct": 3
+},
+{
+  "question": "Passengers are forbidden _ to the driver.",
+  "answers": ["talk", "to talk", "talkings", "talked"],
+  "correct": 1
+},
+{
+  "question": "I have given up _____ any books or magazines.",
+  "answers": ["to reading", "read", "reading", "to read"],
+  "correct": 2
+},
+{
+  "question": "I was woken up by _____.",
+  "answers": [
+    "the rings bell",
+    "the bell rings",
+    "the bell to ringing",
+    "the bell ringing"
+  ],
+  "correct": 3
+},
+{
+  "question": "If my mom ______ the lottery, she'd give some of the money to each member of her family.",
+  "answers": ["won", "have won", "will win", "wins"],
+  "correct": 0
+},
+{
+  "question": "If you are robbed, do the police!",
+  "answers": ["called", "call", "to call", "calling"],
+  "correct": 1
+},
+{
+  "question": "Amir was very helpful. He gave us some very useful _____.",
+  "answers": ["the advice", "an advice", "advice", "advises"],
+  "correct": 2
+},
+{
+  "question": "Dr. Smith has taken on the position of ... Head of Department.",
+  "answers": ["an", "few", "some", "zero article"],
+  "correct": 3
+},
+{
+  "question": "It's ____ when you ask people for money.",
+  "answers": ["embarrass", "embarrasses", "embarrassed", "embarrassing"],
+  "correct": 3
+},
+{
+  "question": "I've been working very hard all day and now I'm ____.",
+  "answers": ["exhausted", "exhausting", "exhaustened", "exhausty"],
+  "correct": 0
+},
+{
+  "question": "I don't think I can finish this project by _____.",
+  "answers": ["me", "mine", "myself", "my"],
+  "correct": 2
+},
+{
+  "question": "10th",
+  "answers": ["teenth", "tens", "tenth", "ten"],
+  "correct": 2
+},
+{
+  "question": "We ____ for an hour when it started to rain heavily.",
+  "answers": ["had been playing", "have played", "was playing", "played"],
+  "correct": 0
+},
+{
+  "question": "I can't stand _____ here anymore!",
+  "answers": ["working", "to working", "to work", "work"],
+  "correct": 0
+},
+{
+  "question": "The train _____ the station at 8 o'clock tomorrow morning.",
+  "answers": ["are leaving", "leaves", "leave", "leaving"],
+  "correct": 1
+},
+{
+  "question": "Look at her hand, she ____ in the garden all morning.",
+  "answers": ["work", "works", "has been working", "have worked"],
+  "correct": 2
+},
+{
+  "question": "Our company ____ significantly over the past year.",
+  "answers": ["grown", "has grown", "was grown", "grow"],
+  "correct": 1
+},
+{
+  "question": "Shall we meet at seven o'clock? — No, I'll still ____ then.",
+  "answers": ["was working", "be working", "have been working", "have worked"],
+  "correct": 1
+},
+{
+  "question": "Alima looked tired because she ____ all day.",
+  "answers": ["had been worked", "has been working", "had working", "had been working"],
+  "correct": 3
+},
+{
+  "question": "You ____ have let us know you'd changed your phone number.",
+  "answers": ["will", "can", "may", "could"],
+  "correct": 3
+},
+{
+  "question": "I'd like ____ on holiday with my boyfriend.",
+  "answers": ["going", "to go", "go", "to going"],
+  "correct": 1
+},
+{
+  "question": "____ the start of the film, I decided to watch it again.",
+  "answers": ["Have missing", "Missing", "Having missed", "Have missed"],
+  "correct": 2
+},
+{
+  "question": "I'll give you a lift if it _____.",
+  "answers": ["will rain", "is raining", "raining", "rained"],
+  "correct": 1
+},
+{
+  "question": "It is high time ____ up to your responsibilities as a parent.",
+  "answers": ["have faced", "be face", "faced", "to face"],
+  "correct": 2
+},
+{
+  "question": "I don't like this drink! Can I have another cup of ____?",
+  "answers": ["coffee", "cofees", "coffees", "coffes"],
+  "correct": 0
+},
+{
+  "question": "I want to be a musician but I can't play _____.",
+  "answers": ["piano", "a piano", "the piano", "an piano"],
+  "correct": 2
+},
+{
+  "question": "Tomorrow will be ____ than today.",
+  "answers": ["hotter", "hoter", "the hottest", "more hot"],
+  "correct": 0
+},
+{
+  "question": "____ of the people I know likes chocolate at all.",
+  "answers": ["No one", "None", "Nobody", "No"],
+  "correct": 1
+},
+{
+  "question": "Spell it correctly: 152",
+  "answers": [
+    "one hundred and fifty two",
+    "one hundred fifty and two",
+    "one hundreds fifty two",
+    "one hundred and fivety two"
+  ],
+  "correct": 0
+},
+{
+  "question": "Please, speak...",
+  "answers": ["quiety", "quietly", "quitly", "quiet"],
+  "correct": 1
+},
+{
+  "question": "I'm going to Moscow ___ the end of March.",
+  "answers": ["in", "on", "at", "for"],
+  "correct": 2
+},
+{
+  "question": "He _____ at the moment.",
+  "answers": ["will sleep", "is sleeping", "sleep", "sleeps"],
+  "correct": 1
+},
+{
+  "question": "This room ____ every day.",
+  "answers": ["is cleaned", "are cleaned", "will clean", "clean"],
+  "correct": 0
+},
+{
+  "question": "This time next month I'll be on holiday. I _____.",
+  "answers": [
+    "have been lying",
+    "am lying",
+    "will be lying",
+    "would be lying"
+  ],
+  "correct": 2
+},
+{
+  "question": "_____ a horse?",
+  "answers": [
+    "Do you ever ride",
+    "Did you ever ridden",
+    "Did you ever ride",
+    "Have you ever ridden"
+  ],
+  "correct": 3
+},
+{
+  "question": "I _____ 50 pages yesterday.",
+  "answers": ["were read", "read", "was read", "reads"],
+  "correct": 1
+},
+{
+  "question": "I _ speak three foreign languages.",
+  "answers": ["am", "must to", "can", "was"],
+  "correct": 2
+},
+{
+  "question": "Hi, Mary! Have you decided where ____ for your holiday?",
+  "answers": ["going", "go", "to go", "to going"],
+  "correct": 2
+},
+{
+  "question": "I have ____ a beautiful butterfly this week.",
+  "answers": ["catched", "catch", "cought", "caught"],
+  "correct": 3
+},
+{
+  "question": "Could you _____ me coffee?",
+  "answers": ["will make", "makes", "make", "made"],
+  "correct": 2
+},
+{
+  "question": "I _____ a new novel about romantic boy now.",
+  "answers": ["write", "am writing", "have been written", "writes"],
+  "correct": 1
+},
+{
+  "question": "We ____ the goods by that time.",
+  "answers": ["will shipped", "has shipped", "had shipped", "were shipped"],
+  "correct": 2
+},
+]
 }
