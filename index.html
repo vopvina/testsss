@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="theme-light">
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-icon">Q</div>
+          <div>
+            <p class="eyebrow">Тесты</p>
+            <h1>Quiz Master</h1>
+          </div>
+        </div>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Переключить тему">
+          <span class="toggle-icon">🌙</span>
+        </button>
+      </header>
+
+      <main class="main-content">
+        <section id="menuScreen" class="screen active">
+          <div class="hero-panel">
+            <p class="hero-kicker">Проверка знаний</p>
+            <h2>Выберите тест</h2>
+          </div>
+          <div id="testList" class="test-list" aria-live="polite"></div>
+        </section>
+
+        <section id="quizScreen" class="screen">
+          <div class="quiz-header">
+            <div class="question-counter-wrap">
+              <span class="question-label">Вопрос</span>
+              <strong id="questionCounter">1 / 1</strong>
+            </div>
+
+            <div class="progress-wrap">
+              <div class="progress-bar-track">
+                <div id="progressBar" class="progress-bar-fill"></div>
+              </div>
+            </div>
+
+            <div class="timer-wrap">
+              <span class="timer-label">Осталось</span>
+              <span id="timer" class="timer-value">00:00</span>
+            </div>
+          </div>
+
+          <div class="question-card">
+            <h3 id="questionText">Вопрос</h3>
+            <div id="answers" class="answers-list"></div>
+          </div>
+
+          <div class="quiz-actions">
+            <button id="backBtn" class="btn btn-secondary" type="button">Назад</button>
+            <button id="nextBtn" class="btn btn-primary" type="button">Далее</button>
+            <button id="finishBtn" class="btn btn-accent hidden" type="button">Завершить тест</button>
+          </div>
+        </section>
+
+        <section id="resultScreen" class="screen">
+          <div class="result-card">
+            <div class="result-header">
+              <p class="result-kicker">Результат</p>
+              <h3>Тест завершён</h3>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-item">
+                <span>Правильно</span>
+                <strong id="correctCount">0</strong>
+              </div>
+              <div class="stat-item">
+                <span>Неправильно</span>
+                <strong id="wrongCount">0</strong>
+              </div>
+              <div class="stat-item">
+                <span>Процент</span>
+                <strong id="percentValue">0%</strong>
+              </div>
+              <div class="stat-item">
+                <span>Оценка</span>
+                <strong id="gradeValue">-</strong>
+              </div>
+            </div>
+
+            <div id="resultGrade" class="result-grade">Результат: -</div>
+
+            <div class="result-actions">
+              <button id="showErrorsBtn" class="btn btn-secondary" type="button">Посмотреть ошибки</button>
+              <button id="retryBtn" class="btn btn-primary" type="button">Пройти ещё раз</button>
+              <button id="menuBtn" class="btn btn-ghost" type="button">Вернуться в меню</button>
+            </div>
+
+            <div id="errorsBlock" class="errors-block hidden"></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="settingsModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-card settings-card">
+        <p class="modal-kicker">Настройки</p>
+        <h3 id="settingsTestTitle">Название теста</h3>
+
+        <div class="settings-summary">
+          <span>Всего вопросов:</span>
+          <strong id="settingsTotalQuestions">0</strong>
+        </div>
+
+        <div class="settings-choice-group">
+          <label class="radio-option">
+            <input type="radio" name="questionMode" value="all" checked />
+            <span>Все</span>
+          </label>
+
+          <label class="radio-option">
+            <input type="radio" name="questionMode" value="custom" />
+            <span>Свое значение</span>
+          </label>
+        </div>
+
+        <label class="field-label" for="customQuestionCount">Количество вопросов</label>
+        <input
+          id="customQuestionCount"
+          class="question-count-input"
+          type="number"
+          min="1"
+          step="1"
+          value="1"
+          disabled
+        />
+
+        <div class="modal-actions settings-actions">
+          <button id="startTestBtn" class="btn btn-primary" type="button">Начать тест</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="resumeModal" class="modal hidden" aria-hidden="true">
+      <div class="modal-card">
+        <p class="modal-kicker">Продолжить?</p>
+        <h3 id="resumeTitle">У вас есть незавершённый тест</h3>
+        <div class="modal-actions">
+          <button id="resumeBtn" class="btn btn-primary" type="button">Продолжить</button>
+          <button id="discardBtn" class="btn btn-secondary" type="button">Начать заново</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
