@@ -2,7 +2,7 @@
 
 const TEST_FILES = [
   "tests/english.json",
-  "tests/general-knowledge.json",
+  "tests/readiness_test(1).json",
 ];
 
 const FALLBACK_TESTS = {
