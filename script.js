@@ -3,6 +3,8 @@
 const TEST_FILES = [
   "tests/english.json",
   "tests/readiness_test(1).json",
+  "tests/databases(6).json",
+  "tests/algorithms(4).json",
 ];
 
 const FALLBACK_TESTS = {
