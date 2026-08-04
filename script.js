@@ -110,7 +110,25 @@ function bindEvents() {
     const selectedIndex = Number(option.dataset.index);
     if (!Number.isInteger(selectedIndex)) return;
 
-    state.selectedAnswers[state.currentQuestionIndex] = selectedIndex;
+    const currentQuestion = state.questions[state.currentQuestionIndex];
+    if (!currentQuestion) return;
+
+    const currentSelection = normalizeSelectedIndexes(
+      state.selectedAnswers[state.currentQuestionIndex],
+      currentQuestion.answers.length,
+      Boolean(currentQuestion.multipleAnswers)
+    );
+
+    if (Boolean(currentQuestion.multipleAnswers)) {
+      const nextSelection = currentSelection.includes(selectedIndex)
+        ? currentSelection.filter((index) => index !== selectedIndex)
+        : [...currentSelection, selectedIndex];
+
+      state.selectedAnswers[state.currentQuestionIndex] = nextSelection;
+    } else {
+      state.selectedAnswers[state.currentQuestionIndex] = selectedIndex;
+    }
+
     saveProgress();
     renderQuestion();
   });
@@ -195,6 +213,7 @@ async function loadTests() {
       time: Number(rawData.time) || 0,
       shuffleQuestions: Boolean(rawData.shuffleQuestions),
       shuffleAnswers: Boolean(rawData.shuffleAnswers),
+      multipleAnswers: Boolean(rawData.multipleAnswers),
       questions: Array.isArray(rawData.questions) ? rawData.questions : [],
     });
   }
@@ -388,7 +407,9 @@ function resumeSavedTest() {
 }
 
 function buildQuestionSet(test, questionLimit = test.questions.length) {
-  const preparedQuestions = test.questions.map((question) => normalizeQuestion(question, test.shuffleAnswers));
+  const preparedQuestions = test.questions.map((question) =>
+    normalizeQuestion(question, test.shuffleAnswers, Boolean(test.multipleAnswers) || Boolean(question.multipleAnswers))
+  );
   const maxAllowed = Math.min(Math.max(Number(questionLimit) || preparedQuestions.length, 1), preparedQuestions.length);
 
   if (test.shuffleQuestions) {
@@ -398,27 +419,38 @@ function buildQuestionSet(test, questionLimit = test.questions.length) {
   return preparedQuestions.slice(0, maxAllowed);
 }
 
-function normalizeQuestion(question, shuffleAnswers) {
+function normalizeQuestion(question, shuffleAnswers, multipleAnswersMode = false) {
   const safeAnswers = Array.isArray(question.answers) ? question.answers.slice() : [];
-  const safeCorrect = Number(question.correct) || 0;
+  const isMultipleAnswer = Boolean(multipleAnswersMode) || Boolean(question.multipleAnswers) || Array.isArray(question.correct);
+  const safeCorrect = normalizeCorrectIndexes(question.correct, safeAnswers.length, isMultipleAnswer);
 
   if (!shuffleAnswers || safeAnswers.length <= 1) {
     return {
       question: question.question || "",
       answers: safeAnswers,
-      correct: clamp(safeCorrect, 0, safeAnswers.length - 1),
+      correct: isMultipleAnswer ? safeCorrect : safeCorrect[0] ?? 0,
+      multipleAnswers: isMultipleAnswer,
     };
   }
 
   const answerEntries = safeAnswers.map((answer, index) => ({ answer, index }));
   shuffleArray(answerEntries);
 
-  const correctIndex = answerEntries.findIndex((entry) => entry.index === safeCorrect);
+  const remappedCorrect = isMultipleAnswer
+    ? safeCorrect.map((index) => {
+        const found = answerEntries.findIndex((entry) => entry.index === index);
+        return found >= 0 ? found : index;
+      })
+    : (() => {
+        const correctIndex = answerEntries.findIndex((entry) => entry.index === safeCorrect[0]);
+        return correctIndex >= 0 ? correctIndex : 0;
+      })();
 
   return {
     question: question.question || "",
     answers: answerEntries.map((entry) => entry.answer),
-    correct: correctIndex >= 0 ? correctIndex : 0,
+    correct: remappedCorrect,
+    multipleAnswers: isMultipleAnswer,
   };
 }
 
@@ -433,6 +465,11 @@ function renderQuestion() {
 
   const totalQuestions = state.questions.length;
   const currentNumber = state.currentQuestionIndex + 1;
+  const selectedIndexes = normalizeSelectedIndexes(
+    state.selectedAnswers[state.currentQuestionIndex],
+    currentQuestion.answers.length,
+    Boolean(currentQuestion.multipleAnswers)
+  );
 
   document.getElementById("questionCounter").textContent = `${currentNumber} / ${totalQuestions}`;
   document.getElementById("questionText").textContent = currentQuestion.question;
@@ -442,7 +479,7 @@ function renderQuestion() {
   const answerContainer = document.getElementById("answers");
   answerContainer.innerHTML = currentQuestion.answers
     .map((answer, index) => {
-      const isSelected = state.selectedAnswers[state.currentQuestionIndex] === index;
+      const isSelected = selectedIndexes.includes(index);
       return `
         <button class="answer-option ${isSelected ? "selected" : ""}" type="button" data-index="${index}">
           <span class="answer-letter">${String.fromCharCode(65 + index)}</span>
@@ -497,9 +534,15 @@ function finishTest() {
   const errors = [];
 
   state.questions.forEach((question, index) => {
-    const selected = state.selectedAnswers[index];
+    const selected = normalizeSelectedIndexes(
+      state.selectedAnswers[index],
+      question.answers.length,
+      Boolean(question.multipleAnswers)
+    );
+    const expected = normalizeCorrectIndexes(question.correct, question.answers.length, Boolean(question.multipleAnswers));
+    const isCorrect = selectedAnswerMatchesExpected(selected, expected, Boolean(question.multipleAnswers));
 
-    if (selected === question.correct) {
+    if (isCorrect) {
       correctCount += 1;
       return;
     }
@@ -507,8 +550,8 @@ function finishTest() {
     wrongCount += 1;
     errors.push({
       question: question.question,
-      userAnswer: selected === null || selected === undefined ? "Нет ответа" : question.answers[selected],
-      correctAnswer: question.answers[question.correct],
+      userAnswer: selected.length ? selected.map((answerIndex) => question.answers[answerIndex]).join(", ") : "Нет ответа",
+      correctAnswer: expected.length ? expected.map((answerIndex) => question.answers[answerIndex]).join(", ") : "Нет правильного ответа",
     });
   });
 
@@ -679,6 +722,61 @@ function getGradeResult(percent) {
     return { label: "D", message: "Нужно повторить" };
   }
   return { label: "F", message: "Плохо" };
+}
+
+function normalizeSelectedIndexes(value, answerCount, multipleAnswers = false) {
+  const safeAnswerCount = Math.max(0, Number(answerCount) || 0);
+
+  if (multipleAnswers) {
+    if (!Array.isArray(value)) {
+      return Number.isInteger(value) ? [clamp(Number(value), 0, Math.max(safeAnswerCount - 1, 0))] : [];
+    }
+
+    const normalizedValues = value
+      .map((item) => Number(item))
+      .filter((item) => Number.isInteger(item) && item >= 0 && item < safeAnswerCount);
+
+    return [...new Set(normalizedValues)].sort((a, b) => a - b);
+  }
+
+  if (Array.isArray(value)) {
+    const firstValue = value[0];
+    const normalizedValue = Number(firstValue);
+    return Number.isInteger(normalizedValue) && normalizedValue >= 0 && normalizedValue < safeAnswerCount
+      ? [normalizedValue]
+      : [];
+  }
+
+  const normalizedValue = Number(value);
+  return Number.isInteger(normalizedValue) && normalizedValue >= 0 && normalizedValue < safeAnswerCount
+    ? [normalizedValue]
+    : [];
+}
+
+function normalizeCorrectIndexes(value, answerCount, multipleAnswers = false) {
+  const safeAnswerCount = Math.max(0, Number(answerCount) || 0);
+
+  if (multipleAnswers) {
+    const values = Array.isArray(value) ? value : value === null || value === undefined ? [] : [value];
+    const normalizedValues = values
+      .map((item) => Number(item))
+      .filter((item) => Number.isInteger(item) && item >= 0 && item < safeAnswerCount);
+
+    return [...new Set(normalizedValues)].sort((a, b) => a - b);
+  }
+
+  const normalizedValue = Number(value);
+  return Number.isInteger(normalizedValue) && normalizedValue >= 0 && normalizedValue < safeAnswerCount
+    ? [normalizedValue]
+    : [0];
+}
+
+function selectedAnswerMatchesExpected(selected, expected, multipleAnswers = false) {
+  if (!multipleAnswers) {
+    return selected.length > 0 && expected.length > 0 && selected[0] === expected[0];
+  }
+
+  return selected.length === expected.length && selected.every((item, index) => item === expected[index]);
 }
 
 function escapeHtml(value) {

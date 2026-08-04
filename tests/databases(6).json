@@ -3,6 +3,7 @@
   "time": 120,
   "shuffleQuestions": true,
   "shuffleAnswers": false,
+  "multipleAnswers": true,
   "questions": [
     {
       "question": "Команда добавления данных в таблицу",
