@@ -1,0 +1,1590 @@
+{
+  "title": "Базы данных",
+  "time": 120,
+  "shuffleQuestions": true,
+  "shuffleAnswers": false,
+  "questions": [
+    {
+      "question": "Команда добавления данных в таблицу",
+      "answers": [
+        "UPDATE",
+        "GET",
+        "DELETE",
+        "POST",
+        "PUT",
+        "INSERT"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Агрегатные функции",
+      "answers": [
+        "AVG",
+        "DELETE",
+        "SELECT",
+        "WHERE",
+        "MIN",
+        "FROM",
+        "UPDATE"
+      ],
+      "correct": [
+        0,
+        4
+      ]
+    },
+    {
+      "question": "В подзапросах оператор IN",
+      "answers": [
+        "может использоваться с подзапросом",
+        "предназначен для нахождения минимального значения",
+        "предназначен для нахождения среднего значения",
+        "определяет набор значений предиката, одно из которых не должно совпадать с другим по порядку",
+        "не может использоваться с подзапросом",
+        "предназначен для нахождения максимального значения",
+        "определяет набор значений предиката, одно из которых должно совпадать с другим по порядку"
+      ],
+      "correct": [
+        0,
+        6
+      ]
+    },
+    {
+      "question": "Дана следующая таблица Students (ID, Name, Surname, GPA, COURSE): 1. Yerbol, Kazbigerov, 2.5, 3 | 2. Ainara, Khasenova, 3, 2 | 3. Murat, Aidosov, 4, 1 | 4. Aidos, Kurmanov, 1.4, 4 | 5. Elena, Fedorova, 2, 1 | 6. Aidar, Elmanov, 3.1, 3 | 7. Anna, Kanina, 2.1, 2. Выберите все результаты следующего SQL запроса SELECT ID FROM Students WHERE Name='Aidar';",
+      "answers": [
+        "1",
+        "5",
+        "2",
+        "3",
+        "Kurmanov",
+        "6"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Дана следующая таблица STUDENTS (те же данные, что выше). Выберите правильный SQL запрос, который для каждого курса (COURSE) определит наименьший GPA",
+      "answers": [
+        "SELECT COURSE, MAX(COURSE) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT COURSE, MIN(COURSE) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT * FROM STUDENTS GROUP BY COURSE;",
+        "SELECT COURSE, MAX(GPA) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT * FROM STUDENTS;",
+        "SELECT COURSE, MIN(GPA) FROM STUDENTS GROUP BY COURSE;"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Операция сокращения в реляционной базе данных",
+      "answers": [
+        "извлекает определенные столбцы из таблицы",
+        "удаляет столбцы",
+        "удаляет строки",
+        "извлекает указанные строки из таблицы",
+        "делает выборку строк",
+        "осуществляет выборку столбцов из таблицы",
+        "осуществляет комбинацию двух таблиц"
+      ],
+      "correct": [
+        0,
+        5
+      ]
+    },
+    {
+      "question": "Правильные утверждения касательно предикатов включающие подзапросы",
+      "answers": [
+        "предикаты не связаны с подзапросом",
+        "предикаты включающие подзапросы используют конструкцию «выражение» «оператор» «подзапрос»",
+        "в этом контексте отсутствует правила",
+        "предикаты с подзапросами являются необратимыми",
+        "предикаты с подзапросами не являются необратимыми",
+        "предикаты включающие подзапросы используют конструкцию «подзапрос» «оператор» «выражение»",
+        "предикаты включающие подзапросы используют конструкцию «подзапрос» «оператор» «подзапрос»"
+      ],
+      "correct": [
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Денормализация предполагает",
+      "answers": [
+        "наличие повышенной избыточности данных",
+        "повышение количество запросов фильтрации",
+        "повышение количество запросов поиска",
+        "повышенное количество данных",
+        "повышенное количество запросов фильтрации",
+        "повышенное количество запросов поиска"
+      ],
+      "correct": [
+        0,
+        3
+      ]
+    },
+    {
+      "question": "Предикат это",
+      "answers": [
+        "операнд",
+        "информация",
+        "дерево",
+        "функция с истинностными значениями, которая, как и все функции, имеет ряд формальных параметров",
+        "параметр",
+        "оператор"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "Операторы, которые можно использовать в подзапросах",
+      "answers": [
+        "having",
+        "BETWEEN",
+        "LIKE",
+        "group by",
+        "ANY",
+        "IS NULL",
+        "IN"
+      ],
+      "correct": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "question": "Дана следующая таблица (те же данные Students, что выше). Выберите правильно написанные SQL запросы использующие group by",
+      "answers": [
+        "SELECT COURSE, MIN(GPA) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT COURSE, WHICH(GPA) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT COURSE, MIN(GPA) FROM STUDENTS GROUPING BY COURSE;",
+        "SELECT COURSE, MAX(GPA) FROM STUDENTS GROUPING BY COURSE;",
+        "SELECT COURSE, AVG(GPA) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT WHO(COURSE), MAX(GPA) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT WHICH(COURSE), MAX(GPA) FROM STUDENTS GROUP BY COURSE;",
+        "SELECT COURSE, MAX(GPA) FROM STUDENTS GROUP BY COURSE;"
+      ],
+      "correct": [
+        0,
+        4,
+        7
+      ]
+    },
+    {
+      "question": "Нормальная форма, где первичный ключ (условие) должен описывать каждый неключевой атрибут, каждая часть составного первичного ключа должна описывать каждый неключевой атрибут, но где взаимные зависимости одних неключевых атрибутов от других",
+      "answers": [
+        "4NF",
+        "5NF",
+        "6NF",
+        "2NF",
+        "3NF",
+        "1NF"
+      ],
+      "correct": [
+        4
+      ]
+    },
+    {
+      "question": "Абстрактная машина доступа к данным, с которой взаимодействует пользователь",
+      "answers": [
+        "строки",
+        "запросы",
+        "деревья",
+        "столбцы",
+        "модель данных",
+        "группа данных"
+      ],
+      "correct": [
+        4
+      ]
+    },
+    {
+      "question": "Правильно написанные SQL команды для изменения данных в таблице",
+      "answers": [
+        "CHANGE Students SET COURSE = 4 WHERE ID = 1;",
+        "UPDATE Students ASSIGN COURSE = 4 WHERE ID = 1;",
+        "UPDATE Students SET COURSE = 2 WHERE ID = 1;",
+        "UPDATE Students SET COURSE = 4 WHERE ID = 1;",
+        "CHANGE Students SET COURSE = 4 WHERE ID = 5;",
+        "UPDATE Students ATTACH COURSE = 4 WHERE ID = 1;",
+        "UPDATE Students SET COURSE = 4 WHICH ID = 1;"
+      ],
+      "correct": [
+        2,
+        3
+      ]
+    },
+    {
+      "question": "Оно используется для объединения таблиц",
+      "answers": [
+        "WHICH",
+        "ALTER",
+        "WHY",
+        "CONNECT",
+        "CREATE",
+        "JOIN"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Переменная отношения R находится в третьей нормальной форме тогда и только тогда, когда для каждой функциональной зависимости X → A в переменной отношения R верно одно из следующих утверждений",
+      "answers": [
+        "X входит в состав некоторого потенциального ключа переменной отношения R",
+        "X не входит в состав некоторого потенциального ключа переменной отношения R",
+        "Подмножество X является суперключом переменной отношения R",
+        "Атрибут A входит в состав некоторого потенциального ключа переменной отношения R",
+        "Атрибут A не входит в состав некоторого потенциального ключа переменной отношения R",
+        "Подмножество X не включает атрибут A (т.е. данная ФЗ тривиальна)",
+        "Подмножество X не является суперключом переменной отношения R",
+        "Подмножество X включает атрибут A (т.е. данная ФЗ тривиальна)"
+      ],
+      "correct": [
+        2,
+        3
+      ]
+    },
+    {
+      "question": "Аксиомы Армстронга в контексте функциональных зависимостей",
+      "answers": [
+        "обратность",
+        "серийность",
+        "параллельность",
+        "рефлексивность",
+        "балансированность",
+        "дополнение",
+        "транзитивность",
+        "интеграция"
+      ],
+      "correct": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Метод сущность-связь называют также методом",
+      "answers": [
+        "EA-диаграмм",
+        "AE-диаграмм",
+        "EE-диаграмм",
+        "RR-диаграмм",
+        "EZ-диаграмм",
+        "ER-диаграмм"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Дана следующая таблица Students (те же данные, что выше). Выберите все результаты следующего SQL запроса SELECT Name FROM Students WHERE ID=1 OR ID=2;",
+      "answers": [
+        "Yerbol",
+        "3",
+        "Kanina",
+        "Aidar",
+        "5",
+        "4",
+        "Ainara"
+      ],
+      "correct": [
+        0,
+        6
+      ]
+    },
+    {
+      "question": "Для того чтобы изменить данные в таблицы используется команда",
+      "answers": [
+        "CREATE",
+        "UPDATE",
+        "ATTACH",
+        "ALTER",
+        "DROP",
+        "USE"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "В этих контекстах может использоваться команда UPDATE",
+      "answers": [
+        "для изменения данных в таблицах",
+        "совместно с вложенными запросами",
+        "для выделения первичного ключа в таблице",
+        "при назначении первичного ключа",
+        "при изменении ограничений в таблице",
+        "для удаления таблицы",
+        "для выборки данных"
+      ],
+      "correct": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "question": "Формальные параметры следующего предиката \"Работник работает в отделе DEPT на позиции POSITION и получает зарплату SALARY\" (слова со всеми заглавными буквами являются столбцами в таблице)",
+      "answers": [
+        "SALARY",
+        "работает",
+        "DEPT",
+        "Работник",
+        "получает",
+        "POSITION",
+        "зарплату",
+        "отделе"
+      ],
+      "correct": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "question": "Нормальная форма, где первичный ключ (целиком) должен описывать каждый неключевой атрибут, какая то часть первичного ключа отдельно не должна описывать каждый неключевой атрибут, где нет зависимостей одних неключевых атрибутов от других и ключевые атрибуты не должны зависеть от неключевых",
+      "answers": [
+        "BCNF",
+        "6NF",
+        "4NF",
+        "1NF",
+        "5NF",
+        "2NF",
+        "7NF",
+        "3NF"
+      ],
+      "correct": [
+        7
+      ]
+    },
+    {
+      "question": "Дана следующая таблица Students (ID, Name, Surname, GPA, COURSE): 1, Yerbol, Urmanov, 2.5, 3 | 2, Aidana, Ashirbekova, 3, 3 | 3, Marat, Aidosov, 4, 1 | 4, Aidos, Kurmanov, 1.4, 4 | 5, Elena, Fedorova, 2, 1 | 6, Aidar, Elmanov, 3.1, 3 | 7. Gaukhar, Khassenova, 2.9, 4. Выберите все результаты следующих SQL запросов: UPDATE Students SET COURSE = 4 WHERE ID = 1; SELECT Name, Course where ID = 1;",
+      "answers": [
+        "Aidana, 2",
+        "Yerbol, 3",
+        "Yerbol, 1",
+        "Aidana, 4",
+        "Yerbol, 2",
+        "Yerbol, 4"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "SQL запросы, использующие агрегатные функции",
+      "answers": [
+        "SELECT * FROM USP WHERE SNUM=4",
+        "SELECT SNUM, AVG (OCENKA) FROM USP GROUP BY SNUM;",
+        "SELECT SNUM, MIN (OCENKA) FROM USP GROUP BY SNUM;",
+        "SELECT * FROM USP",
+        "SELECT * FROM USP WHERE SNUM=5",
+        "SELECT * FROM USP WHERE SNUM=3",
+        "SELECT SNUM FROM USP",
+        "SELECT SNUM, MAX (OCENKA) FROM USP GROUP BY SNUM;"
+      ],
+      "correct": [
+        1,
+        2,
+        7
+      ]
+    },
+    {
+      "question": "Основные сложности денормализации",
+      "answers": [
+        "усложняет запросы группировки",
+        "усложняет запросы создания таблиц",
+        "усложняет запросы удаления таблиц",
+        "усложняет запросы поиска",
+        "усложняет запросы фильтрации",
+        "создает проблемы избыточности и аномалии обновления",
+        "сложно понять, когда ее закончить"
+      ],
+      "correct": [
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Правильно написанные SQL запросы, использующие объединения таблиц",
+      "answers": [
+        "SELECT b.*, p.* FROM Branch1 b LEFT JOIN PropertyForRent1 p ON b.bCity = p.pCity;",
+        "SELECT b.*, p.* FROM Branch1 b WHICH FULL JOIN PropertyForRent1 p ON b.bCity = p.pCity;",
+        "SELECT b.*, p.* FROM Branch1 b CONNECT FULL JOIN PropertyForRent1 p ON b.bCity = p.pCity;",
+        "SELECT b.*, p.* FROM Branch1 b CONNECT RIGHT JOIN PropertyForRent1 p ON b.bCity = p.pCity;",
+        "SELECT b.*, p.* FROM Branch1 b CONNECT LEFT JOIN PropertyForRent1 p ON b.bCity = p.pCity;",
+        "SELECT b.*, p.* FROM Branch1 b RIGHT JOIN PropertyForRent1 p ON b.bCity = p.pCity;",
+        "SELECT b.*, p.* FROM Branch1 b WHICH LEFT JOIN PropertyForRent1 p ON b.bCity = p.pCity;"
+      ],
+      "correct": [
+        0,
+        5
+      ]
+    },
+    {
+      "question": "Команды DDL",
+      "answers": [
+        "PUT",
+        "DROP",
+        "CREATE",
+        "ALTER",
+        "INSERT",
+        "DELETE",
+        "GET",
+        "UPDATE"
+      ],
+      "correct": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "question": "Дана следующая таблица Students (ID, Name, Surname, GPA, COURSE): 1, Yerbol, Urmanov, 2.5, 3 | 2, Aidana, Ashirbekova, 3, 3 | 3, Marat, Aidosov, 4, 1 | 4, Aidos, Kurmanov, 1.4, 4 | 5, Elena, Fedorova, 2, 1 | 6, Aidar, Elmanov, 3.1, 3 | 7. Gaukhar, Khassenova, 2.9, 4. Выберите все результаты следующего SQL запроса SELECT ID FROM Students ORDER BY GPA ASC LIMIT 1;",
+      "answers": [
+        "4",
+        "2",
+        "0",
+        "2.5",
+        "1.4",
+        "3"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Дана следующая таблица Students (ID, Name, Surname, GPA, COURSE): 1, Yerbol, Kazhigerey, 2.5, 3 | 2, Aidana, Khassenova, 3, 2 | 3, Marat, Aidosov, 4, 1 | 4, Aidos, Kurmanov, 1.4, 4 | 5, Elena, Fedorova, 2, 1 | 6, Aidar, Elmanov, 3.1, 3 | 7, Anna, Karenina, 2.1, 2. Выберите все результаты следующего SQL запроса SELECT ID FROM Students WHERE Name='Yerbol' OR Name='Aidana';",
+      "answers": [
+        "4",
+        "Aidosov",
+        "3",
+        "Marat",
+        "1",
+        "2",
+        "None"
+      ],
+      "correct": [
+        4,
+        5
+      ]
+    },
+    {
+      "question": "В символической записи функциональной зависимости правильные следующие утверждения",
+      "answers": [
+        "правая часть символической записи функциональной зависимости является зависимостью",
+        "правая часть символической записи функциональной зависимости является двоичностью",
+        "левая часть символической записи функциональной зависимости является детерминантом",
+        "правая часть символической записи функциональной зависимости является детерминантом",
+        "правая часть символической записи функциональной зависимости является независимостью",
+        "левая часть символической записи функциональной зависимости является зависимостью",
+        "левая часть символической записи функциональной зависимости является двоичностью"
+      ],
+      "correct": [
+        0,
+        2
+      ]
+    },
+    {
+      "question": "Основные виды операций над таблицей в реляционной базе данных",
+      "answers": [
+        "соединение",
+        "создание прокси запросов",
+        "интеграция",
+        "безопасность",
+        "сокращение",
+        "проекция",
+        "защита",
+        "балансировка"
+      ],
+      "correct": [
+        0,
+        4,
+        5
+      ]
+    },
+    {
+      "question": "Дана следующая таблица Students (ID, Name, Surname, GPA, COURSE): 1, Yerbol, Kazhigerey, 2.5, 3 | 2, Aidana, Khassenova, 3, 2 | 3, Marat, Aidosov, 4, 1 | 4, Aidos, Kurmanov, 1.4, 4 | 5, Elena, Fedorova, 2, 1 | 6, Aidar, Elmanov, 3.1, 3 | 7. Anna, Karenina, 2.1, 2. Выберите все ID, которое возвратит следующий SQL запрос SELECT ID FROM Students WHERE COURSE=1;",
+      "answers": [
+        "6",
+        "4",
+        "5",
+        "7",
+        "2",
+        "1",
+        "3"
+      ],
+      "correct": [
+        2,
+        6
+      ]
+    },
+    {
+      "question": "Операторы позволяют моделировать",
+      "answers": [
+        "поведение данных в общем плане",
+        "бинарные деревья поиска",
+        "контейнеры",
+        "двоичные деревья поиска",
+        "очереди",
+        "виды поведения данных",
+        "структуру данных"
+      ],
+      "correct": [
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Конструкции, которых нельзя использовать в подзапросах",
+      "answers": [
+        "MAX",
+        "IN",
+        "AVG",
+        "SELECT *",
+        "WHERE",
+        "BETWEEN",
+        "MIN"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "То, что не относится к агрегатным функциям, используемые в group by",
+      "answers": [
+        "create",
+        "avg",
+        "max",
+        "count",
+        "min",
+        "which",
+        "sum"
+      ],
+      "correct": [
+        0,
+        5
+      ]
+    },
+    {
+      "question": "Оператор, использовать которого запрещено в подзапросах",
+      "answers": [
+        "min",
+        "select",
+        "in",
+        "where",
+        "having",
+        "avg"
+      ],
+      "correct": [
+        4
+      ]
+    },
+    {
+      "question": "Правила третьей нормальной формы",
+      "answers": [
+        "неключевые атрибуты (если они вообще существуют) являются взаимно независимыми",
+        "когда обязательно наличие трех первичных ключей",
+        "когда обязательно наличие двух внешних ключей",
+        "неключевые атрибуты (если они вообще существуют) являются взаимно зависимыми",
+        "когда обязательно наличие двух первичных ключей",
+        "неключевые атрибуты (если они вообще существуют) неприводимо зависимы от первичного ключа",
+        "когда обязательно наличие трех внешних ключей"
+      ],
+      "correct": [
+        0,
+        5
+      ]
+    },
+    {
+      "question": "Определите атрибуты в этом предложении \"Пожалуйста, назовите фамилию и должность преподавателя.\"",
+      "answers": [
+        "точка",
+        "должность",
+        "запятая",
+        "назовите",
+        "фамилия",
+        "преподаватель",
+        "пожалуйста"
+      ],
+      "correct": [
+        1,
+        4
+      ]
+    },
+    {
+      "question": "Последовательность выражения, оператора и подзапроса в контексте предикатов с подзапросами",
+      "answers": [
+        "подзапрос, оператор, выражение",
+        "оператор, выражение, подзапрос",
+        "выражение, подзапрос, оператор",
+        "выражение, оператор, подзапрос",
+        "подзапрос, выражение, оператор",
+        "между ними нет последовательности"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "Обозначение трехуровневой архитектуры",
+      "answers": [
+        "уровень пользовательского интерфейса",
+        "уровень масштабируемости",
+        "уровень реализации прикладных алгоритмов и средств обработки данных",
+        "уровень соединения",
+        "уровень получения данных",
+        "СУБД, в которой хранятся данные",
+        "уровень присваивания",
+        "уровень отправки"
+      ],
+      "correct": [
+        0,
+        2,
+        5
+      ]
+    },
+    {
+      "question": "Операции соединения в реляционной алгебре",
+      "answers": [
+        "естественное соединение",
+        "тета соединение",
+        "условное соединение",
+        "результативное соединение",
+        "внешнее соединение",
+        "альфа соединение"
+      ],
+      "correct": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "question": "Операция над множествами: Set{1,2,3,4,5} union Set{1,3,4,8,9}",
+      "answers": [
+        "{8,9}",
+        "{1,2,3,4,5,8,9}",
+        "{2,8,9}",
+        "{8,9,5,4,1,2,3}",
+        "{1,2,3,4,5,1,3,4,8,9}",
+        "{2,5}",
+        "{1,3,4}"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "Основные объекты модели данных RDF",
+      "answers": [
+        "запрос",
+        "параметры",
+        "свойство",
+        "ресурс",
+        "таблица",
+        "ячейка",
+        "связь",
+        "типы данных"
+      ],
+      "correct": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "question": "Ключ, который используется для создания уникальных идентификаторов строк и содержит смысл сам по себе",
+      "answers": [
+        "уникальный",
+        "составной",
+        "естественный",
+        "простой",
+        "суррогатный",
+        "искусственный",
+        "вторичный",
+        "внешний"
+      ],
+      "correct": [
+        2
+      ]
+    },
+    {
+      "question": "Агрегирующая функция AVG",
+      "answers": [
+        "позволяет упорядочить выбранные записи только в порядке убывания (DESC)",
+        "возвращает усредненное значение в указанном столбце",
+        "возвращает количество значений в указанном столбце",
+        "позволяет упорядочить выбранные записи только в порядке возрастания (ASC)",
+        "возвращает сумму значений в указанном столбце",
+        "возвращает максимальное значение в указанном столбце"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "К операциям управления данных относится",
+      "answers": [
+        "описание атрибутов приложения",
+        "интеграция мета данных",
+        "указание ограничения целостности и защиты",
+        "вставка в базу данных новых записей",
+        "модификация сведений, хранимых в базе данных",
+        "обозначение системного каталога"
+      ],
+      "correct": [
+        3,
+        4
+      ]
+    },
+    {
+      "question": "Запрос, который выбирает поля, где column1 не содержит значения от 1 до 3 включительно",
+      "answers": [
+        "select * from table where column1 =1 and 3",
+        "select * from table where column1<=1 or column1 > 3",
+        "select * from table where column1 not in (1,2,3)",
+        "select * from table where column1 not between 1 and 3",
+        "select * from table where column1<1 and column1>3",
+        "select * from table where column1!=1 and column1!=2 and column1!=3",
+        "select * from table where column1=1 and column1=2 and column1=3",
+        "select * from table where column1=1 or column1=2 or column1=3"
+      ],
+      "correct": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "question": "Запрос, сортирующий сотрудников по длине их имени и фамилии вместе взятых в порядке возрастания (last_name-фамилия, first_name –имя, – атрибуты таблицы table)",
+      "answers": [
+        "select last_name, first_name from table order by length(last_name) + length(first_name) desc",
+        "select last_name, first_name from table order by length(concat(last_name, first_name))",
+        "select last_name, first_name from table order by last_name +first_name",
+        "select last_name, first_name from table order by length(last_name) + length(first_name)",
+        "select last_name, first_name from table order by last_name ,first_name",
+        "select last_name, first_name from table order by last_name ,length(first_name)"
+      ],
+      "correct": [
+        1,
+        3
+      ]
+    },
+    {
+      "question": "Запрос, сортирующий сотрудников по последней букве фамилии в порядке (z to a)",
+      "answers": [
+        "select last_name from table order by substr(last_name,1,-1) asc",
+        "select last_name from table order by instr(last_name,-1,1) desc",
+        "select last_name from table order by last_name[-1]",
+        "select last_name from table sort by substr(last_name,-1,-1)",
+        "select last_name from table order by substr(last_name,-1,1) desc",
+        "select last_name from table order by last_name desc",
+        "select last_name from table sort by instr(last_name,-1,1) desc"
+      ],
+      "correct": [
+        4
+      ]
+    },
+    {
+      "question": "Оператор SELECT",
+      "answers": [
+        "выполняет выборки и отображении данных одной или более таблиц базы данных",
+        "определение имен используемой таблицы или нескольких таблиц",
+        "предназначен для добавления данных в таблицу",
+        "предназначен для модификации уже помещенных в таблицу данных",
+        "упорядочить выбранные записи в порядке возрастания (ASC) или убывания (DESC) значений любого столбца или комбинации столбцов",
+        "возвращает сумму значений в указанном столбце"
+      ],
+      "correct": [
+        0,
+        1,
+        4
+      ]
+    },
+    {
+      "question": "DDL команда создания индекса",
+      "answers": [
+        "create or replace index idx on table1;",
+        "create index idx on table1(column1);",
+        "create or replace index idx on column1 of table1;",
+        "create or replace index idx on table1(column1);",
+        "create index idx for table1(column1);",
+        "alter index idx on column1 of table1;",
+        "create or replace index idx on table1(column1,column2,column3);",
+        "create index idx on table1(column1,column2);"
+      ],
+      "correct": [
+        1,
+        7
+      ]
+    },
+    {
+      "question": "Автоматическая фиксация данных происходит при обстоятельствах",
+      "answers": [
+        "один sql запрос",
+        "происходит одно заявление DCL",
+        "происходит несколько последовательных заявлений DML",
+        "происходит два последовательных запроса sql",
+        "происходит одно заявление DML",
+        "происходит одно заявление DDL"
+      ],
+      "correct": [
+        1,
+        5
+      ]
+    },
+    {
+      "question": "Транзакция базы данных состоит из",
+      "answers": [
+        "два последовательных заявления DCL",
+        "один оператор DDL",
+        "одно заявление DCL",
+        "операторы DML, которые составляют одно последовательное изменение данных",
+        "операторы DML, которые не составляют одно последовательное изменение данных",
+        "sql запрос"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "SQL является",
+      "answers": [
+        "объектно-ориентированным языком программирования",
+        "инструмент обработки медиафайлов",
+        "процедурным языком",
+        "стандартным языком определения и манипулирования реляционными базами данных",
+        "непроцедурным языком, построенным на использовании обычных английских слов (таких как SELECT, INSERT, DELETE)",
+        "процедурным языком, который непредназначен для работы с базами данных",
+        "инструмент 3D моделирования"
+      ],
+      "correct": [
+        3,
+        4
+      ]
+    },
+    {
+      "question": "В таблице products есть только 3 продукта. Цена первого продукта 15000, цена второго продукта 30000, третьего 2000. Результат запроса\nselect price from products\nwhere price>all (select 1000 from dual\nUNION\nselect 10000 from dual\nUNION\nselect 12000 from dual);",
+      "answers": [
+        "15000, 30000",
+        "10000,15000",
+        "2000",
+        "30000,15000",
+        "30000",
+        "15000, 2000"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "В таблице products есть только 3 продукта. Цена первого продукта 15000, цена второго продукта 20000, третьего 2000. Результат запроса\nselect price from products\nwhere price>any (select 1000 from dual\nUNION\nselect 30000 from dual\nUNION\nselect 12000 from dual);",
+      "answers": [
+        "15000, 20000",
+        "20000,15000,2000",
+        "2000,20000,15000",
+        "10000,15000",
+        "20000",
+        "15000, 2000",
+        "2000,15000,20000",
+        "2000,20000"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "Проблемы, которые предотвращают уровень изоляции транзакций READ COMMITTED",
+      "answers": [
+        "грязное чтение",
+        "ложное добавление",
+        "потерянное обновление",
+        "фантомное удаление",
+        "дублирующее чтение",
+        "фантомное чтение",
+        "повторяющееся чтение",
+        "фантомное обновление"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Проблемы при параллельном выполнении транзакций",
+      "answers": [
+        "грязное чтение",
+        "потерянное обновление",
+        "дублирующее чтение",
+        "фантомное удаление",
+        "повторяющееся чтение",
+        "фантомное чтение",
+        "ложное добавление",
+        "фантомное обновление"
+      ],
+      "correct": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "question": "Соединение многих отношений в запросе может повлиять на чтение и сделать его чрезмерно медленным. Решение данной проблемы",
+      "answers": [
+        "удаление ненужных данных",
+        "создание материализованного представления",
+        "привести данные в 3 нормальную форму",
+        "создание представления",
+        "привести данные в 4 нормальную форму",
+        "денормализация"
+      ],
+      "correct": [
+        1,
+        5
+      ]
+    },
+    {
+      "question": "Среда СУБД состоит",
+      "answers": [
+        "только из аппаратного обеспечения (компьютеров) и пользователей",
+        "только из аппаратного обеспечения (компьютеров)",
+        "только из программного обеспечения",
+        "только из пользователей данных",
+        "из аппаратного обеспечения (компьютеров), данных, процедур пользователей",
+        "пользователей и администратора",
+        "только из моделей мета данных",
+        "только из моделей и данных"
+      ],
+      "correct": [
+        4
+      ]
+    },
+    {
+      "question": "Реляционные операции сравнения",
+      "answers": [
+        "⊆",
+        "<=",
+        "⊇",
+        "<>",
+        ">=",
+        "⊂",
+        ">",
+        "<"
+      ],
+      "correct": [
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "question": "Типы работы разработчика логической базы данных",
+      "answers": [
+        "абстрагированное и сетевое",
+        "системный и сетевое проектирование",
+        "логическое и эффективное проектирование",
+        "концептуальное и логическое проектирование",
+        "концептуальное и сетевое проектирование",
+        "логическое и сетевое",
+        "реляционное и концептуальное проектирование"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "Количество атрибутов в таблице называется",
+      "answers": [
+        "кардинальность отношения",
+        "n-мерность отношения",
+        "ранг отношения",
+        "сила отношения",
+        "мощность отношения",
+        "степень отношения"
+      ],
+      "correct": [
+        1,
+        5
+      ]
+    },
+    {
+      "question": "Ключ, который является первичным в другой таблице, но в текущей таблице служит вспомогательным ключом для связи",
+      "answers": [
+        "естественный ключ",
+        "вторичный ключ",
+        "суррогатный ключ",
+        "первичный ключ",
+        "простой ключ",
+        "внешний ключ",
+        "составной ключ",
+        "искусственный ключ"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Запрос, который выбирает сумму всех уникальных значений столбца в таблице",
+      "answers": [
+        "select sum(distinct column) from table;",
+        "select sum(column) from table;",
+        "select unique sum(column) from table;",
+        "select mean(column) from table;",
+        "select sum(column) from table where sum(column) is distinct;",
+        "select sum(column) from table group by column;",
+        "select column, sum(column) from table;"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Запрос, который выбирает поля, где column1 содержит букву 'a' или 'e'",
+      "answers": [
+        "select * from table where column1 like '%a' and column1 like '%e'",
+        "select * from table where column1 consist of('a','e')",
+        "select * from table where column1 like '%a%' or column1 like '%e%'",
+        "select * from table where instr(column1,'a')>0 or instr(column1,'e')>0",
+        "select * from table where instr(column1,'a')>0 and instr(column1,'e')>0",
+        "select * from table where column1 like '%a%' and column1 like '%e%'",
+        "select * from table where column1 like 'a' and column1 like 'e'",
+        "select * from table where instr(column1,'a')=1 or instr(column1,'e')=1"
+      ],
+      "correct": [
+        2,
+        3
+      ]
+    },
+    {
+      "question": "Запрос, который выбирает поля, где column1 содержит значения от 1 до 3 включительно",
+      "answers": [
+        "select * from table where column1 =1 and 3",
+        "select * from table where column1 between 1 and 3",
+        "select * from table where column1>1 and column1<3",
+        "select * from table where column1 in (1,2,3)",
+        "select * from table where column1> 1 or column1 < 3",
+        "select * from table where column1=1 and column1=2 or column1=3",
+        "select * from table where column1=1 or column1=2 or column1=3",
+        "select * from table where column1=1 and column1=2 and column1=3"
+      ],
+      "correct": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "question": "Запрос, сортирующий отделы (порядок возрастания) по сумме зарплат сотрудников, работающих там, при подсчете суммы учитывались только зарплаты больше 10000 (department, salary – атрибуты таблицы table)",
+      "answers": [
+        "select department, sum(salary) from table order by last_name desc",
+        "select department, sum(salary) from table group by department order by last_name",
+        "select department, sum(salary) from table group by department having salary>10000 order by sum(salary)",
+        "select sum(salary), department from table where salary>10000 group by department order by sum(salary) asc",
+        "select department, sum(salary) from table where salary>10000 group by department order by sum(salary)",
+        "select department, sum(salary) from table group by department order by sum(salary) desc"
+      ],
+      "correct": [
+        3,
+        4
+      ]
+    },
+    {
+      "question": "Запрос, сортирующий отделы по средней арифметической зарплаты в порядке возрастания (department, salary – атрибуты таблицы table)",
+      "answers": [
+        "select department, sum(salary)/count(*) from table group by department order by sum(salary)/count(*) asc",
+        "select avg (salary) as average, department from table group by department order by avg(salary) asc",
+        "select department, mean (salary) from table group by department order by mean(salary)",
+        "select department, avg (salary) from table order by avg(salary) group by department",
+        "select department, avg (salary) from table group by department order by avg(salary) desc",
+        "select department, avg (salary) from table group by department order by avg(salary)"
+      ],
+      "correct": [
+        0,
+        1,
+        5
+      ]
+    },
+    {
+      "question": "Объединение двух таблиц, возвращающих только совпадающие строки из двух таблиц по сопоставленному условию",
+      "answers": [
+        "cross join",
+        "left outer join",
+        "right outer join",
+        "outer join",
+        "full outer join",
+        "inner join"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Цели управления параллельным выполнением в распределенной среде",
+      "answers": [
+        "освобождение всех установленных блокировок",
+        "отправить всем участникам команду GLOBAL_ABORT",
+        "устойчивость к отказам на узле и в линиях связи",
+        "поместить в системный журнал запись commit и обеспечить ее принудительную запись из буфера",
+        "направить на узлы сообщение о принятом глобальном решении",
+        "отсутствие дополнительных ограничений на структуру"
+      ],
+      "correct": [
+        2,
+        5
+      ]
+    },
+    {
+      "question": "Подраздел SQL, который используется для добавления данных в базу данных, для изменения существующих данных в базе данных или удаления данных из базы данных",
+      "answers": [
+        "data manipulation language",
+        "data definition language",
+        "data altering language",
+        "data control language",
+        "transaction control language",
+        "mdx",
+        "query language",
+        "query by example"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Оператор, который завершает текущую транзакцию, отбрасывая все ожидающие изменения данных до предыдущих постоянных данных",
+      "answers": [
+        "rollback to savepoint A",
+        "rollback",
+        "checkpoint",
+        "commit A",
+        "commit",
+        "savepoint A"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "Запрос, который выводит название продукта, чья цена выше средней арифметической цены всех продуктов",
+      "answers": [
+        "select price from products where price > (select avg(price) from products)",
+        "select product_name from products where price > (select mean(price) from products)",
+        "select product_name from products where price >avg(price)",
+        "select product_name from products where price in (select avg(price) from products)",
+        "select product_name from products where price > (select sum(price)/count(*) from products)",
+        "select product_name from products where price > (select median(price) from products)",
+        "select product_name from products where price > (select avg(price) from products)"
+      ],
+      "correct": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "question": "Оператор DESCRIBE",
+      "answers": [
+        "передает программе описание столбцов результирующей таблицы",
+        "предоставляет программе описание входных параметров",
+        "освобождает память от дополнительной информации",
+        "указывает на этап обработки данных",
+        "отправляет дату и время транзакций",
+        "отправляет курсор на дополнительную информацию",
+        "выводит адрес ошибки"
+      ],
+      "correct": [
+        0,
+        1
+      ]
+    },
+    {
+      "question": "Операторы сравнения однострочных подзапросов",
+      "answers": [
+        ">",
+        "all",
+        "<",
+        "in",
+        "=",
+        "some",
+        "any"
+      ],
+      "correct": [
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "question": "Файловый сервер",
+      "answers": [
+        "клиент принимает от пользователя запрос",
+        "клиент управляет пользовательским интерфейсом",
+        "большой объем сетевого трафика",
+        "на каждой рабочей станции должна находиться полная копия СУБД",
+        "управление параллельной работой",
+        "клиент управляет пользовательской логикой приложения"
+      ],
+      "correct": [
+        2,
+        3
+      ]
+    },
+    {
+      "question": "Нормализация",
+      "answers": [
+        "включает объединение существующих таблиц в одну большую",
+        "процесс удаления избыточных данных из таблиц для повышения эффективности хранения, целостности данных и масштабируемости",
+        "процесс преобразования сложных структур данных в простые, стабильные структуры данных",
+        "процесс добавления избыточных данных в таблицы для повышения эффективности хранения, целостности данных и масштабируемости",
+        "процесс преобразования простых структур данных в сложные, стабильные структуры данных",
+        "включает разделение существующих таблиц на несколько других, которые могут быть объединены или связаны когда выдается запрос"
+      ],
+      "correct": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "question": "Аномалии, которые возможны при денормализации",
+      "answers": [
+        "аномалии создания",
+        "аномалии объединения",
+        "аномалии обновления",
+        "аномалии соединения",
+        "аномалии слияния",
+        "аномалии вставки",
+        "аномалии удаления",
+        "аномалии поиска"
+      ],
+      "correct": [
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Формальная основа реляционной модели БД, основанная на теории множеств",
+      "answers": [
+        "реляционная алгебра",
+        "логическая алгебра",
+        "булева алгебра",
+        "операционная алгебра",
+        "агрегатная алгебра",
+        "иерархическая алгебра"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Виртуальная таблица, содержимое которой определяется запросом",
+      "answers": [
+        "realtable",
+        "tempdb",
+        "views",
+        "trigger",
+        "resource",
+        "stored procedure",
+        "virtable"
+      ],
+      "correct": [
+        2
+      ]
+    },
+    {
+      "question": "Тип целостности данных проверяющая правильность связей между таблицами",
+      "answers": [
+        "ссылочная",
+        "внешняя",
+        "семантическая",
+        "примарная",
+        "верхняя",
+        "доменная"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Если задан ORDER BY, то таблица является только считываемой с",
+      "answers": [
+        "выполняющими соединениями двух таблиц",
+        "заданным порядком упорядочения",
+        "изменяющей структурой таблицы",
+        "фильтрующими группами столбцов",
+        "группирующими строками с одинаковыми значениями столбца",
+        "группируемыми строками с одинаковыми значениями столбцов",
+        "удаляющими дублирующимися строками из результирующего набора",
+        "группирующими строками с одинаковыми значениями столбца или столбцов"
+      ],
+      "correct": [
+        1
+      ]
+    },
+    {
+      "question": "Блокировка фрагмента данных имеет аспекты",
+      "answers": [
+        "транзакции",
+        "планировщик",
+        "буфер",
+        "режим",
+        "длительность",
+        "гранулярность"
+      ],
+      "correct": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "question": "Недостатки иерархической модели",
+      "answers": [
+        "безопасность данных",
+        "структурная зависимость",
+        "простота понимания структуры данных",
+        "каждый узел имеет свое имя (идентификатор)",
+        "ограничения в организации отношений между сущностями",
+        "независимость данных",
+        "целостность данных"
+      ],
+      "correct": [
+        1,
+        4
+      ]
+    },
+    {
+      "question": "Отсортировать документы по типу и дате создания",
+      "answers": [
+        "ORDER BY Type Documents, CreationDate DESCENDING",
+        "ARRANGE BY Documents Type, CreationDate DESC",
+        "ORDER BY DocumentsType, CreationDate DESC",
+        "ORDER BY DocumentsType, CreationDate",
+        "ORDER BY DocumentsType, CreationDate ASC",
+        "SORT Documents BY Type, CreationDate DESC"
+      ],
+      "correct": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "question": "Выборка строк с неопределенным значением в столбце",
+      "answers": [
+        "SELECT * FROM VENDORS WHERE VENDOR IN ('Asus', 'Intel', 'IBM');",
+        "SELECT * FROM deliveries ORDER BY amount IS NOT NULL;",
+        "SELECT * FROM goodslist WHERE weight IS NULL;",
+        "SELECT * FROM VENDORS ORDER BY VENDOR IN ('Asus', 'Intel', 'IBM');",
+        "SELECT * FROM deliveries WHERE amount IS NOT NULL;",
+        "SELECT * FROM Asus WHERE VENDOR IS NULL;",
+        "SELECT * FROM goodslist ORDER BY weight IS NULL;",
+        "SELECT * FROM deliveries WHERE amount IS NULL;"
+      ],
+      "correct": [
+        2,
+        7
+      ]
+    },
+    {
+      "question": "Поле представления может содержать агрегированную информацию",
+      "answers": [
+        "group",
+        "acs",
+        "max",
+        "sum",
+        "min",
+        "decs"
+      ],
+      "correct": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "question": "Реляционная модель определяется понятиями",
+      "answers": [
+        "указатели",
+        "кардинальность",
+        "древовидный граф",
+        "атрибут",
+        "ссылочный аппарат",
+        "коллекция записей",
+        "навигационный подход"
+      ],
+      "correct": [
+        1,
+        3
+      ]
+    },
+    {
+      "question": "Основные уровни-компоненты SQL Server",
+      "answers": [
+        "Server Profiler",
+        "Integration Services",
+        "ODBCAPI",
+        "In-Memory OLTP Engine",
+        "Sockets Layer",
+        "Query Processor",
+        "Storage Engine",
+        "Reporting Services"
+      ],
+      "correct": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Выбрать все категории товаров, для которых суммарное количество заказов больше 10",
+      "answers": [
+        "SELECT * FROM categories WHERE category id IN (SELECT category_id FROM products WHERE product_id IN (SELECT product_id FROM orders GROUP BY product_id HAVING COUNT() > 10));",
+        "SELECT * FROM categories WHERE category_id IN (SELECT category_id FROM orders WHERE COUNT() == 10);",
+        "SELECT * FROM categories WHERE category_id IN (SELECT category_id FROM products INNER JOIN orders ON products.product_id = orders.product_id WHERE COUNT() < 10);",
+        "SELECT * FROM categories WHERE category_id IN (SELECT category_id FROM products INNER JOIN orders ON products.product_id = orders.product_id GROUP BY category_id HAVING COUNT() > 10);",
+        "SELECT * FROM categories, category_id IN (SELECT category id FROM products WHERE product_id IN (SELECT product_id FROM orders GROUP BY product_id) AND COUNT() > 10);",
+        "SELECT * FROM categories WHERE category_id IN (SELECT category_id FROM orders GROUP BY category_id HAVING COUNT() = 10);"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "Рекомендуемые параметры оценки системы управления базами данных с точки зрения определение данных",
+      "answers": [
+        "простота реорганизации",
+        "поддержка контрольных точек",
+        "предусмотренные файловые структуры",
+        "расширенная поддержка первичных ключей",
+        "определение внешних ключей",
+        "поддержка определения файловых структур",
+        "предусмотренные типы данных"
+      ],
+      "correct": [
+        0,
+        4,
+        6
+      ]
+    },
+    {
+      "question": "Выбрать все продукты, которые не были заказаны",
+      "answers": [
+        "SELECT * FROM products WHERE product_id NOT IN (SELECT product_id FROM orders GROUP BY product_id);",
+        "SELECT * FROM products WHERE product_id NOT EXISTS (SELECT DISTINCT product_id FROM orders);",
+        "SELECT * FROM products WHERE productId NOT EXISTS (SELECT productId FROM orders);",
+        "SELECT * FROM products WHERE product_id NOT IN (SELECT product_id FROM orders HAVING COUNT(*) > 0);",
+        "SELECT * FROM products WHERE product_id NOT IN (SELECT DISTINCT product_id FROM orders);",
+        "SELECT * FROM product WHERE product_id NOT IN (SELECT DISTINCT product_id FROM order);",
+        "SELECT * FROM products WHERE productId NOT IN (SELECT DISTINCT productId FROM orders);"
+      ],
+      "correct": [
+        0,
+        4
+      ]
+    },
+    {
+      "question": "Является системным экземпляром сервера, хранит информацию о конфигурации сервера, сведения обо всех учетных записях пользователя, сведения обо всех остальных базах данных",
+      "answers": [
+        "msdb",
+        "model",
+        "odbc",
+        "master",
+        "tempdb",
+        "resource"
+      ],
+      "correct": [
+        3
+      ]
+    },
+    {
+      "question": "Количество полей (столбцов) в реляционной модели",
+      "answers": [
+        "атрибут",
+        "отношение",
+        "кардинальность",
+        "ссылки",
+        "домен",
+        "степень отношения",
+        "первичный ключ",
+        "кортеж"
+      ],
+      "correct": [
+        5
+      ]
+    },
+    {
+      "question": "Не относится к агрегирующим функциям",
+      "answers": [
+        "SUM",
+        "MAX",
+        "ALL",
+        "COUNT",
+        "MIN",
+        "AVG",
+        "ANY",
+        "ASC"
+      ],
+      "correct": [
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "question": "Вильям Армстронг предложил дополнительные полезные правила вывода, которые могут быть получены на основании правил: дополнение, рефлексивность, приращение, транзитивность",
+      "answers": [
+        "слияние",
+        "подмножество",
+        "декомпозиция",
+        "объединение",
+        "псевдотранзитивность",
+        "репликация"
+      ],
+      "correct": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "question": "Этап проектирования БД который включает в себя инфологическое и даталогическое проектирования",
+      "answers": [
+        "концептуальное проектирование",
+        "системный анализ",
+        "логическое проектирование",
+        "аномалия модификации",
+        "физическое проектирование",
+        "функциональное проектирование",
+        "архитектурное проектирование"
+      ],
+      "correct": [
+        0
+      ]
+    },
+    {
+      "question": "Исправление значений в двух столбцах таблицы",
+      "answers": [
+        "DELETE FROM SUPPLIERS WHERE CURRENT OF SUPPLIERS_CURSOR",
+        "UPDATE ENAME SET FNAME='JON', LNAME='JONS' WHERE ENAME_ID=67;",
+        "UPDATE GOODSLIST SET WEIGHT=100, GROSSWEIGHT=110 WHERE GOODSLIST_ID=2567;",
+        "CREATE DATABASE 'WAREHOUSE';",
+        "UPDATE SUPPLER SET STATUS=100, CITY=110 WHERE SUPPLER_ID=25;",
+        "CREATE DOMAIND_DATE AS DATE DEFAULT current_date;",
+        "DELETE TABLE PEOPLES (IndNum int, Surname char(30), FName char(20), LName char(20), BDay date);",
+        "REMOVE DATABASE 'WAREHOUSE';"
+      ],
+      "correct": [
+        1,
+        2,
+        4
+      ]
+    }
+  ]
+}

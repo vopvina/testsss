@@ -1,4 +1,6 @@
 [
   "english.json",
-  "readiness_test(1).json"
+  "readiness_test(1).json",
+  "databases(6).json",
+  "algorithms(4).json"
 ]
