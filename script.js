@@ -71,6 +71,9 @@ const FALLBACK_TESTS = {
   },
 };
 
+const STORAGE_KEY = "quiz-progress";
+const SESSION_ID_KEY = "quiz-session-id";
+
 const state = {
   tests: [],
   activeTestId: null,
@@ -158,7 +161,7 @@ function bindEvents() {
 
   document.getElementById("menuBtn").addEventListener("click", () => {
     stopTimer();
-    localStorage.removeItem("quiz-progress");
+    clearSavedProgress();
     hideSettingsModal();
     showScreen("menu");
     resetResultState();
@@ -173,7 +176,7 @@ function bindEvents() {
   document.getElementById("showErrorsBtn").addEventListener("click", toggleErrors);
   document.getElementById("resumeBtn").addEventListener("click", resumeSavedTest);
   document.getElementById("discardBtn").addEventListener("click", () => {
-    localStorage.removeItem("quiz-progress");
+    clearSavedProgress();
     hideResumeModal();
   });
 
@@ -276,6 +279,54 @@ function startTest(testId, forceFresh = false) {
   openSettingsModal(selectedTest);
 }
 
+function getProgressStorageKey() {
+  try {
+    let sessionId = sessionStorage.getItem(SESSION_ID_KEY);
+    if (!sessionId) {
+      sessionId = `session-${Date.now()}-${Math.random().toString(16).slice(2, 10)}`;
+      sessionStorage.setItem(SESSION_ID_KEY, sessionId);
+    }
+    return `${STORAGE_KEY}:${sessionId}`;
+  } catch (error) {
+    return STORAGE_KEY;
+  }
+}
+
+function clearSavedProgress() {
+  try {
+    const sessionKey = getProgressStorageKey();
+    sessionStorage.removeItem(sessionKey);
+    sessionStorage.removeItem(STORAGE_KEY);
+    sessionStorage.removeItem(SESSION_ID_KEY);
+
+    const keysToRemove = [];
+    for (let index = 0; index < sessionStorage.length; index += 1) {
+      const key = sessionStorage.key(index);
+      if (key && key.startsWith(`${STORAGE_KEY}:`)) {
+        keysToRemove.push(key);
+      }
+    }
+
+    keysToRemove.forEach((key) => sessionStorage.removeItem(key));
+  } catch (error) {
+    sessionStorage.removeItem(STORAGE_KEY);
+  }
+
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+    const legacyKeys = [];
+    for (let index = 0; index < localStorage.length; index += 1) {
+      const key = localStorage.key(index);
+      if (key && key.startsWith(`${STORAGE_KEY}:`)) {
+        legacyKeys.push(key);
+      }
+    }
+    legacyKeys.forEach((key) => localStorage.removeItem(key));
+  } catch (error) {
+    // ignore legacy cleanup failures
+  }
+}
+
 function openSettingsModal(test) {
   const totalQuestions = Array.isArray(test.questions) ? test.questions.length : 0;
   const customInput = document.getElementById("customQuestionCount");
@@ -345,6 +396,7 @@ function launchTest(test, selectedCount) {
   const maxQuestions = Array.isArray(test.questions) ? test.questions.length : 0;
   const safeCount = clamp(Number(selectedCount) || maxQuestions, 1, maxQuestions);
 
+  clearSavedProgress();
   state.activeTestId = test.id;
   state.activeTest = test;
   state.questions = buildQuestionSet(test, safeCount);
@@ -366,7 +418,7 @@ function resumeSavedTest() {
 
   const selectedTest = state.tests.find((test) => test.id === savedProgress.testId);
   if (!selectedTest) {
-    localStorage.removeItem("quiz-progress");
+    clearSavedProgress();
     hideResumeModal();
     return;
   }
@@ -560,7 +612,7 @@ function finishTest() {
   const gradeSummary = getGradeResult(percent);
 
   state.errors = errors;
-  localStorage.removeItem("quiz-progress");
+  clearSavedProgress();
 
   document.getElementById("correctCount").textContent = String(correctCount);
   document.getElementById("wrongCount").textContent = String(wrongCount);
@@ -657,12 +709,26 @@ function saveProgress() {
     timeRemaining: state.timeRemaining,
   };
 
-  localStorage.setItem("quiz-progress", JSON.stringify(payload));
+  const progressKey = getProgressStorageKey();
+  sessionStorage.setItem(progressKey, JSON.stringify(payload));
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
+
+  try {
+    localStorage.removeItem(STORAGE_KEY);
+  } catch (error) {
+    // ignore legacy storage cleanup errors
+  }
 }
 
 function readSavedProgress() {
   try {
-    const raw = localStorage.getItem("quiz-progress");
+    const currentKey = getProgressStorageKey();
+    const currentRaw = sessionStorage.getItem(currentKey);
+    if (currentRaw) {
+      return JSON.parse(currentRaw);
+    }
+
+    const raw = sessionStorage.getItem(STORAGE_KEY);
     return raw ? JSON.parse(raw) : null;
   } catch (error) {
     return null;
